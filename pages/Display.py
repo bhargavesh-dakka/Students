@@ -100,7 +100,7 @@ st.markdown("""
     }
 </style>""",unsafe_allow_html=True)
 
-st.columns(3)[2].header(st.session_state.Name.capitalize())
+st.columns(3)[2].header(st.session_state.Name.upper())
 st.divider()
 
 st.write("Supervised (Regression) Project : ")
