@@ -28,6 +28,7 @@ def create_connection():
 space = "_"*30
 
 def send_mail():
+    r=1
         
     gmail_user = 'b9703016043b@gmail.com'
     gmail_password = 'gbdzjsfafxiuunyw'
@@ -79,7 +80,10 @@ Subject: %s
 
         print ('Email sent!')
     except:
+        r = 0
         print ('Something went wrong...')
+        
+    return r
 #-------------------------------------------------------------------
 
 
@@ -138,6 +142,11 @@ with col2 :
     if st.button("Recieve Mail"):
         #inserting the values to database.
         insert_details(st.session_state.Name.lower(), st.session_state.Email.lower(), st.session_state.regression.split(":")[1], st.session_state.classification.split(":")[1], st.session_state.unsuper.split(":")[1], slider_value)
-        send_mail()
-        st.balloons()
-        st.success("Mail sent successfully!")
+        if send_mail():
+            st.balloons()
+            st.success("Mail sent successfully!")
+        else:
+            st.error("There is an error in sending the mail. please contact admin.")
+        if st.button("Home"):
+            switch_page(main)
+            
