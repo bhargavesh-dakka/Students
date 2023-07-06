@@ -60,7 +60,7 @@ Student Name           : <strong>{name}<strong> <br>
 </code></pre>
 """
     
-    email_text = """From: Application <bhargaveshdakka@gmail.com>
+    email_text = """From: Project Confirmation! <bhargaveshdakka@gmail.com>
 To: Admin <%s>
 MIME-Version: 1.0
 Content-type: text/html
