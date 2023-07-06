@@ -13,7 +13,7 @@ insurance policy rather han the ineffective part.
 
 Approach: The classical machine learning tasks like Data Exploration, Data Cleaning,
 Feature Engineering, Model Building and Model Testing. Try out different machine
-learning algorithms that’s best fit for the above case.
+learning algorithms thats best fit for the above case.
 Some Famous Algorithms: - Multiple Linear Regression, Decision tree Regression and
 Gradient Boosting, Decision tree, Regression
 

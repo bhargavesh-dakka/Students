@@ -16,6 +16,6 @@ Feature Engineering, Model Building and Model Testing. Try out different machine
 learning algorithms that’s best fit for the above case.
 
 Results: You have to build a solution that should able to predict the probability of credit
-default based on credit card owner’s characteristics and payment history.
+default based on credit card owners characteristics and payment history.
 
 Dataset link : https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset

@@ -18,6 +18,6 @@ particular compound whether it is active (1) or not (0).
 
 Approach: The classical machine learning tasks like Data Exploration, Data Cleaning,
 Feature Engineering, Model Building and Model Testing. Try out different machine
-learning algorithms that’s best fit for the above case.
+learning algorithms thats best fit for the above case.
 
 DataSet link : https://github.com/sowmyagowri/Drug-Activity-Prediction-Dorothea-Dataset
