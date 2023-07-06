@@ -147,6 +147,6 @@ with col2 :
             st.success("Mail sent successfully!")
         else:
             st.error("There is an error in sending the mail. please contact admin.")
-        if st.button("Home"):
-            switch_page(main)
+        # if st.button("Home"):
+        #     switch_page(main)
             
