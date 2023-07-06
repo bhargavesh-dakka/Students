@@ -10,6 +10,6 @@ The goal is to predict whether the customer will purchase the travel or not.
 
 Approach: The classical machine learning tasks like Data Exploration, Data Cleaning,
 Feature Engineering, Model Building and Model Testing. Try out different machine
-learning algorithms that’s best fit for the above case.
+learning algorithms thats best fit for the above case.
 
 Dataset link : https://github.com/foos0016/Travel-Package-Purchase-Prediction/blob/main/Source/Tourism.csv

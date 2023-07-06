@@ -12,7 +12,7 @@ indicates that the failure was caused by something else.
 
 Approach: The classical machine learning tasks like Data Exploration, Data Cleaning,
 Feature Engineering, Model Building and Model Testing. Try out different machine
-learning algorithms that’s best fit for the above case.
+learning algorithms thats best fit for the above case.
 
 Results: You have to build a solution that should able to predict whether a failure of a
 Scania Truck component is related to the air pressure system (APS) or not.

@@ -1,8 +1,20 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
 import mysql.connector as mysql
+import smtplib, ssl
 
 st.set_page_config(initial_sidebar_state="collapsed")
+
+
+
+name = st.session_state.Name
+
+reg = st.session_state.regression
+classss = st.session_state.classification
+unsup = st.session_state.unsuper
+
+st.write(classss)
+
 
 def create_connection():
     mydb = mysql.connect(
@@ -13,6 +25,62 @@ def create_connection():
     )
     return mydb
 
+space = "_"*30
+
+def send_mail():
+        
+    gmail_user = 'b9703016043b@gmail.com'
+    gmail_password = 'gbdzjsfafxiuunyw'
+
+    sent_from = gmail_user
+    to = st.session_state.Email
+    subject = 'Project Confirmation !'
+    body = f"""
+<pre><code>
+Student Name           : <strong>{name}<strong> <br>
+{space}<br>
+
+<strong>Regression     : </strong><br>
+{space}<br>
+{reg}
+
+{space}<br>
+<strong>Classification : </strong><br>
+{space}<br>
+{classss}
+
+
+{space}<br>
+<strong>Unsupervised   : </strong><br>
+{space}<br>
+{unsup}
+
+{space}<br>
+</code></pre>
+"""
+    
+    email_text = """From: Application <bhargaveshdakka@gmail.com>
+To: Admin <%s>
+MIME-Version: 1.0
+Content-type: text/html
+Subject: %s
+
+%s
+
+
+""" % (st.session_state.Email,subject,body)
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_password)
+        server.sendmail(sent_from, to, email_text)
+        server.close()
+
+        print ('Email sent!')
+    except:
+        print ('Something went wrong...')
+#-------------------------------------------------------------------
 
 
 def insert_details(name, email, reg_name, class_name, unsuper_name, feed_back):
@@ -70,7 +138,6 @@ with col2 :
     if st.button("Recieve Mail"):
         #inserting the values to database.
         insert_details(st.session_state.Name, st.session_state.Email, st.session_state.regression.split(":")[1], st.session_state.classification.split(":")[1], st.session_state.unsuper.split(":")[1], slider_value)
+        send_mail()
         st.balloons()
         st.success("Mail sent successfully!")
-
-
