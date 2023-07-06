@@ -7,7 +7,7 @@ st.set_page_config(initial_sidebar_state="collapsed")
 
 
 
-name = st.session_state.Name
+name = st.session_state.Name.upper()
 
 reg = st.session_state.regression
 classss = st.session_state.classification
