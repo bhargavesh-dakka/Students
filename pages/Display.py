@@ -13,7 +13,7 @@ reg = st.session_state.regression
 classss = st.session_state.classification
 unsup = st.session_state.unsuper
 
-st.write(classss)
+# st.write(classss)
 
 
 def create_connection():
