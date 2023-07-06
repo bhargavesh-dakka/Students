@@ -137,7 +137,7 @@ with col1 :
 with col2 :
     if st.button("Recieve Mail"):
         #inserting the values to database.
-        insert_details(st.session_state.Name, st.session_state.Email, st.session_state.regression.split(":")[1], st.session_state.classification.split(":")[1], st.session_state.unsuper.split(":")[1], slider_value)
+        insert_details(st.session_state.Name.lower(), st.session_state.Email.lower(), st.session_state.regression.split(":")[1], st.session_state.classification.split(":")[1], st.session_state.unsuper.split(":")[1], slider_value)
         send_mail()
         st.balloons()
         st.success("Mail sent successfully!")
