@@ -1,3 +1,2 @@
-os
 streamlit_extras
 mysql-connector-python
